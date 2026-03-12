@@ -2,25 +2,100 @@
 <html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
-  <title>醴链通证RWA · 陆圣集团Web3战略规划</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+  <title>醴链通证 RWA · 陆圣集团 Web3 战略规划</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <meta name="description" content="醴链通证RWA·共酿数字生态 —— 陆圣集团 Web3 资产化战略规划">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+  <!-- 引入美观的 Docsify Themeable 主题 -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/css/theme-simple.css">
   <style>
     :root {
+      /* 核心主题色：陆圣老酒的深红色调 */
       --theme-color: #8B1A1A;
-      --sidebar-width: 280px;
+      /* 侧边栏及基础设置 */
+      --sidebar-width: 320px;
       --base-font-size: 16px;
+      --base-font-family:
+        "Inter", "PingFang SC", "Microsoft YaHei", sans-serif;
+      
+      /* 美化侧边栏和高亮 */
+      --sidebar-background: #fafafc;
+      --sidebar-nav-link-color--active: var(--theme-color);
+      --sidebar-nav-link-font-weight--active: 700;
+      --sidebar-name-color: var(--theme-color);
+      --sidebar-name-font-weight: 800;
+      
+      /* 美化正文区域 */
+      --content-max-width: 860px;
+      --heading-color: #2c3e50;
+      --link-color: var(--theme-color);
+      --link-text-decoration--hover: underline;
+      
+      /* 提示框美化 */
+      --notice-tip-border-color: var(--theme-color);
+      --notice-tip-background: #FFF5F5;
     }
-    .sidebar-toggle { color: var(--theme-color); }
-    .app-name-link { font-weight: bold; font-size: 1.1em; }
+
+    body {
+      background-color: #ffffff;
+      line-height: 1.7;
+    }
+
+    /* 对标题和Logo的特别定制 */
+    .app-name-link {
+      display: flex !important;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+      margin-top: 20px;
+      margin-bottom: 10px;
+      text-decoration: none;
+    }
+    
+    .app-name-link img {
+      width: 90px;
+      height: 90px;
+      border-radius: 50%;
+      box-shadow: 0 8px 24px rgba(139, 26, 26, 0.15);
+      border: 2px solid #fff;
+      transition: transform 0.3s ease;
+    }
+    
+    .app-name-link img:hover {
+      transform: scale(1.05);
+    }
+    
+    /* 让正文内的图片默认带点圆角和阴影 */
+    .markdown-section img {
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+    }
+    
+    /* 美化标题下划线 */
+    .markdown-section h2 {
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.5em;
+      margin-top: 2em;
+    }
+    .markdown-section h3 {
+      color: #8B1A1A;
+      opacity: 0.9;
+    }
+    
+    /* 优化表格样式 */
+    .markdown-section table th {
+      background-color: #f6f8fa;
+      color: #24292e;
+      font-weight: 600;
+    }
   </style>
 </head>
 <body>
-  <div id="app">加载中，请稍候...</div>
+  <div id="app">✨ 正在加载陆圣 RWA 战略规划...</div>
   <script>
     window.$docsify = {
-      name: '醴链通证RWA',
+      name: '醴链通证 RWA',
+      logo: '/_media/logo.png',
       nameLink: '/',
       repo: '',
       loadSidebar: true,
@@ -28,13 +103,15 @@
       auto2top: true,
       coverpage: false,
       search: {
-        placeholder: '搜索文档...',
+        placeholder: '🔍 搜索文档...',
         noData: '未找到相关内容',
         depth: 3
       },
       pagination: {
-        previousText: '上一章',
-        nextText: '下一章',
+        previousText: '上一步',
+        nextText: '下一步',
+        crossChapter: true,
+        crossChapterText: true,
       },
       copyCode: {
         buttonText: '复制',
@@ -42,12 +119,17 @@
         successText: '已复制'
       },
       routerMode: 'hash',
+      formatUpdated: '{YYYY}/{MM}/{DD} {HH}:{mm}',
     }
   </script>
+  <!-- Docsify Core -->
   <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/docsify.min.js"></script>
+  <!-- Plugins -->
   <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/plugins/search.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/docsify-copy-code@2/dist/docsify-copy-code.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/docsify-pagination/dist/docsify-pagination.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/plugins/zoom-image.min.js"></script>
+  <!-- Syntax highlighting -->
   <script src="https://cdn.jsdelivr.net/npm/prismjs@1/components/prism-bash.min.js"></script>
 </body>
 </html>
